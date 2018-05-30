@@ -1,0 +1,163 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Author: your.email@your.domain.com"
+      },
+      {
+        "line": 2,
+        "value": "#Keywords Summary :"
+      },
+      {
+        "line": 3,
+        "value": "#Feature: List of scenarios."
+      },
+      {
+        "line": 4,
+        "value": "#Scenario: Business rule through list of steps with arguments."
+      },
+      {
+        "line": 5,
+        "value": "#Given: Some precondition step"
+      },
+      {
+        "line": 6,
+        "value": "#When: Some key actions"
+      },
+      {
+        "line": 7,
+        "value": "#Then: To observe outcomes or validation"
+      },
+      {
+        "line": 8,
+        "value": "#And,But: To enumerate more Given,When,Then steps"
+      },
+      {
+        "line": 9,
+        "value": "#Scenario Outline: List of steps for data-driven as an Examples and \u003cplaceholder\u003e"
+      },
+      {
+        "line": 10,
+        "value": "#Examples: Container for s table"
+      },
+      {
+        "line": 11,
+        "value": "#Background: List of steps run before each of the scenarios"
+      },
+      {
+        "line": 12,
+        "value": "#\"\"\" (Doc Strings)"
+      },
+      {
+        "line": 13,
+        "value": "#| (Data Tables)"
+      },
+      {
+        "line": 14,
+        "value": "#@ (Tags/Labels):To group Scenarios"
+      },
+      {
+        "line": 15,
+        "value": "#\u003c\u003e (placeholder)"
+      },
+      {
+        "line": 16,
+        "value": "#\"\""
+      },
+      {
+        "line": 17,
+        "value": "## (Comments)"
+      },
+      {
+        "line": 18,
+        "value": "#Sample Feature Definition Template"
+      }
+    ],
+    "line": 20,
+    "elements": [
+      {
+        "line": 24,
+        "name": "Automated ETL validation of CS90_EHUB_PROD RAW Output table with RAW Input table(s)",
+        "description": "",
+        "id": "benefits-raw-input-to-output-etl-validation;automated-etl-validation-of-cs90-ehub-prod-raw-output-table-with-raw-input-table(s)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 917529808,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Test Data is in RECEIVED state in CS90_CONTRACT_MASTER table",
+            "match": {
+              "location": "StepDefinition.given_data_is_in_received_state()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 43693748424,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Java Batch Engine processes provided Contract Codes",
+            "match": {
+              "location": "StepDefinition.when_Batch_Engine_processes_Contracts(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "ETL_SQL_Pair",
+                  "SE-112870"
+                ],
+                "line": 27
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 26895383978,
+              "error_message": "java.lang.RuntimeException: The two ResultSets contains different Values!\r\n\tat ehub_benefits.StepDefinition.then_validate_ETL_in_database_layer(StepDefinition.java:137)\r\n\tat ✽.Then Validate columns of RAW Input table CS90_CONTRACT_MASTER are moved to CS90_EHUB_PROD Table(benefits.feature:28)\r\n",
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Validate columns of RAW Input table CS90_CONTRACT_MASTER are moved to CS90_EHUB_PROD Table",
+            "match": {
+              "location": "StepDefinition.then_validate_ETL_in_database_layer(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "ETL_SQL_Pair",
+                  "SE-112870"
+                ],
+                "line": 29
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 23,
+            "name": "@SE-112870"
+          }
+        ]
+      }
+    ],
+    "name": "Benefits RAW Input to Output ETL Validation",
+    "description": "",
+    "id": "benefits-raw-input-to-output-etl-validation",
+    "keyword": "Feature",
+    "uri": "benefits.feature",
+    "tags": [
+      {
+        "line": 19,
+        "name": "@SOAI-5721"
+      }
+    ]
+  }
+]

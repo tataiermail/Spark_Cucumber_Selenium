@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1527647997230" stop="1527648068889" version="1.5.0" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Benefits RAW Input to Output ETL Validation</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1527647997340" stop="1527648068889" status="broken">
+            <name>Automated ETL validation of CS90_EHUB_PROD RAW Output table with RAW Input table(s)</name>
+            <title>Automated ETL validation of CS90_EHUB_PROD RAW Output table with RAW Input table(s)</title>
+            <description type="text"></description>
+            <failure>
+                <message>RuntimeException: The two ResultSets contains different Values!</message>
+                <stack-trace>java.lang.RuntimeException: The two ResultSets contains different Values!
+	at ehub_benefits.StepDefinition.then_validate_ETL_in_database_layer(StepDefinition.java:137)
+	at ✽.Then Validate columns of RAW Input table CS90_CONTRACT_MASTER are moved to CS90_EHUB_PROD Table(benefits.feature:28)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1527647997355" stop="1527647998281" status="passed">
+                    <name>Given Test Data is in RECEIVED state in CS90_CONTRACT_MASTER table</name>
+                    <title>Given Test Data is in RECEIVED state in CS90_CONTRACT_MASTER table</title>
+                </step>
+                <step start="1527647998281" stop="1527648041962" status="passed">
+                    <name>When Java Batch Engine processes provided Contract Codes</name>
+                    <title>When Java Batch Engine processes provided Contract Codes</title>
+                </step>
+                <step start="1527648041962" stop="1527648068888" status="broken">
+                    <name>Then Validate columns of RAW Input table CS90_CONTRACT_MASTER are moved to CS90_EHUB_PROD Table</name>
+                    <title>Then Validate columns of RAW Input table CS90_CONTRACT_MASTER are moved to CS90_EHUB_PROD Table</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Automated ETL validation of CS90_EHUB_PROD RAW Output table with RAW Input table(s)"/>
+                <label name="feature" value="Benefits RAW Input to Output ETL Validation"/>
+                <label name="host" value="L5LBHZF2"/>
+                <label name="thread" value="32644@L5LBHZF2.cucumber.api.cli.Main.main()(14)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="Benefits RAW Input to Output ETL Validation"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
